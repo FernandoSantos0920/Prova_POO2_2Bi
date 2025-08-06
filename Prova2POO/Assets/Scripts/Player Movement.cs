@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
 
-    private int velocidade = 4;
+    private int velocidade = 7;
     void Start()
     {
         
