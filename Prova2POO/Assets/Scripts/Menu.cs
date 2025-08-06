@@ -65,5 +65,31 @@ public class Menu : MonoBehaviour
         panelControles.SetActive(false);
         panelOptions.SetActive(true);
     }
-    
+
+
+    public void Extras()
+    {
+        panelExtras.SetActive(true);
+        panelBase.SetActive(false);
+    }
+
+    public void VoltarExtras()
+    {
+        panelExtras.SetActive(false);
+        panelBase.SetActive(true);
+    }
+
+
+    public void Credits()
+    {
+        panelCredits.SetActive(true);
+        panelBase.SetActive(false);
+    }
+
+    public void VoltarCredits()
+
+    {
+        panelCredits.SetActive(false);
+        panelBase.SetActive(true);
+    }
 }
