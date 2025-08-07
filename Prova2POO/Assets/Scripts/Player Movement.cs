@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : Personagem
 {
 
 
-    private int velocidade = 7;
+  
     void Start()
     {
         
@@ -15,14 +15,26 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            gameObject.transform.position -= new Vector3(velocidade * Time.deltaTime, 0, 0);
+            gameObject.transform.position -= new Vector3(getVelocidade() * Time.deltaTime, 0, 0);
         }
         
         if (Input.GetKey(KeyCode.D))
         {
-            gameObject.transform.position += new Vector3(velocidade * Time.deltaTime, 0, 0);
+            gameObject.transform.position += new Vector3(getVelocidade() * Time.deltaTime, 0, 0);
         }
         
         
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Inimigo"))
+        {
+            int vidas = getVidas() - 1;
+            setVidas(vidas);
+        }
+    }
+    
+    
 }
