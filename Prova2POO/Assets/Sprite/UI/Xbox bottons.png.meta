@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Xbox bottons_0: 7451257444584723119
+      Xbox bottons_1: 5728369570412710209
+      Xbox bottons_2: 4575185629126667417
+      Xbox bottons_3: -3141205504619017353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

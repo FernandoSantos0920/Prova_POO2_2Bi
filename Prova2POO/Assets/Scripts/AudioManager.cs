@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public Toggle toggleMusic;
     public Slider sliderVolume;
     public Slider sliderSFX;
+    public AudioSource audioSource;
     
     public int volume;
     public int sfx;
@@ -21,11 +22,18 @@ public class AudioManager : MonoBehaviour
         musicOn = toggleMusic.isOn;
         volume = (int) sliderVolume.value;
         sfx = (int) sliderSFX.value;
+        
+        
+        audioSource.volume = volume;
     }
 
   
     void Update()
     {
+        
+        audioSource.volume = volume;
+      
+        
         
         musicOn = toggleMusic.isOn;
         volume = (int) sliderVolume.value;
@@ -36,12 +44,14 @@ public class AudioManager : MonoBehaviour
         if (musicOn == true)
         {
             textoVariação.text = "Ligado";
-            textoVariação.color = Color.green;    
+            textoVariação.color = Color.green;
+            audioSource.Play();
         }
         else
         {
             textoVariação.text = "Desligado";
             textoVariação.color = Color.red;
+            
         }
         
         
