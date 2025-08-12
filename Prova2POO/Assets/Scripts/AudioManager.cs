@@ -7,8 +7,8 @@ public class AudioManager : MonoBehaviour
 {
   
     public Toggle toggleMusic;
+    public Slider sliderMusica;
     public Slider sliderVolume;
-    public Slider sliderSFX;
     public AudioSource audioSource;
     
     public int volume;
@@ -20,8 +20,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         musicOn = toggleMusic.isOn;
-        volume = (int) sliderVolume.value;
-        sfx = (int) sliderSFX.value;
+        volume = (int) sliderMusica.value;
+        sfx = (int) sliderVolume.value;
         
         
         audioSource.volume = volume;
@@ -36,8 +36,8 @@ public class AudioManager : MonoBehaviour
         
         
         musicOn = toggleMusic.isOn;
-        volume = (int) sliderVolume.value;
-        sfx = (int) sliderSFX.value;
+        volume = (int) sliderMusica.value;
+        sfx = (int) sliderVolume.value;
         
         
         
@@ -45,13 +45,13 @@ public class AudioManager : MonoBehaviour
         {
             textoVariação.text = "Ligado";
             textoVariação.color = Color.green;
-            audioSource.Play();
+          
         }
         else
         {
             textoVariação.text = "Desligado";
             textoVariação.color = Color.red;
-            
+           
         }
         
         
